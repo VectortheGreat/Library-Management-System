@@ -3,14 +3,29 @@ package org.example;
 public class Book {
     String title;
     String author;
-    private int id;
-    boolean isAvailable;
+    public String id;
+    public boolean isAvailable;
 
-    public Book(String title, String author, int id, boolean isAvailable) {
+    public Book(String title, String author) {
         this.title = title;
         this.author = author;
+        this.isAvailable = true;
+    }
+
+    public void setId(String id) {
         this.id = id;
-        this.isAvailable = isAvailable;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     @Override
